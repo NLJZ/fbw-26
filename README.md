@@ -5,6 +5,9 @@
 - [x] Complete
 - [ ] Incomplete
 
-<img src="https://nlj.netlify.com/img/head.jpg" width="200px"><img src="https://nlj.netlify.com/img/bodyofaman.jpg" width="200px">
+![Photo of water](https://spacenews.com/wp-content/uploads/2019/10/rocketlab-corvus.jpg)
 
-Drawing of a Head With Legs
+Rocket | Time | Space
+------ | ---- | -----
+Fast | 1 Hour | Deep
+Slow | 3 Hours | Shallow
