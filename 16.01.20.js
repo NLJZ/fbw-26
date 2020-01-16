@@ -84,15 +84,15 @@ for (let i = 0; i <= str.length; i++) {
 let addThem = 0;
 for (let i = 1; i <= 20; i++) {
   addThem += i;
-  console.log(addThem);
 }
+console.log(addThem);
 
 //There are i bottles of beer on the wall.
 //Write a program that will output, “There is one bottle of beer on the wall.”
 //“There are two bottles of beer on the wall” up until there are five bottles.
 
 for (let i = 1; i <= 5; i++) {
-  if (i < 2) {
+  if (i === 1) {
     console.log(`There is ${i} bottle of beer on the wall.`);
   } else {
     console.log(`There are ${i} bottles of beer on the wall.`);
@@ -104,7 +104,85 @@ for (let i = 1; i <= 5; i++) {
 for (let i = 1; i <= 20; i++) {
   if (i % 2 === 0) {
     console.log(`${i} is even`);
-  } else {
+  } else if (i % 2 == 1) {
     console.log(`${i} is odd`);
   }
 }
+
+// 1, 2, 4, 8... 128
+
+for (let i = 1; i <= 128; i *= 2) {
+  console.log(i);
+}
+
+// 0, 2, 4... 10
+
+for (let i = 0; i <= 10; i += 2) {
+  console.log(i);
+}
+
+// 3, 6, 9 ... 15
+for (let i = 3; i <= 15; i += 3) {
+  console.log(i);
+}
+
+// 9, 8, 7... 0
+for (let i = 9; i >= 0; i--) {
+  console.log(i);
+}
+
+// 1 1 1 2 2 2 3 3 3 4 4 4
+
+for (let m = 1; m <= 4; m++) {
+  for (let j = 0; j <= 4; j++) {
+    console.log(j);
+  }
+}
+
+// 0 1 2 3 4 0 1 2 3 4 0 1 2 3 4
+for (let m = 1; m <= 4; m++) {
+  for (let j = 0; j <= 4; j++) {
+    console.log(j);
+  }
+}
+
+let box = "";
+for (let i = 0; i <= 4; i++) {
+  box += "YYYY \n";
+}
+console.log(box);
+
+let thing = "";
+for (let i = 1; i <= 4; i++) {
+  thing += "T";
+  console.log(thing);
+}
+
+let atThing = "@@@@";
+for (let i = 4; i >= 1; i--) {
+  if (atThing.length >= i) {
+    yes = atThing.substring(1);
+    console.log(yes);
+  }
+}
+
+let firstName = "Nathan";
+let firstName1 = "Peter";
+let firstName2 = "Orland";
+
+let arr = ["Nathan", "Peter", "Orland"];
+console.log(arr[2]);
+
+let arrInt = [1, 2, 3, 4, 5, 6];
+console.log(arrInt[3]);
+
+let arrNum = ["First", "Second", "Third", "Fourth"];
+for (let i = 0; i < arrNum.length; i++) {
+  console.log(`${i} is the ${arrNum[i]}`);
+}
+
+let arrSt = [];
+for (let i = 0; i <= 10; i++) {
+  arrSt[i] = 2 + i;
+}
+console.log(arrSt);
