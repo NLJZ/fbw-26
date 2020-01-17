@@ -158,12 +158,10 @@ for (let i = 1; i <= 4; i++) {
   console.log(thing);
 }
 
-let atThing = "@@@@";
-for (let i = 4; i >= 1; i--) {
-  if (atThing.length >= i) {
-    yes = atThing.substring(1);
-    console.log(yes);
-  }
+for (let i = 4; i > 0; i--) {
+  let atStuff = "@@@@";
+  let atFinal = atStuff.slice(0, i);
+  console.log(atFinal);
 }
 
 let firstName = "Nathan";
