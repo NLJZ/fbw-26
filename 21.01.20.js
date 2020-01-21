@@ -196,3 +196,30 @@ let strToArr = str1.split("");
 strToArr.reverse();
 let revStr = strToArr.join("");
 console.log(revStr);
+
+function reverseEm(arr) {
+  let newArray = [];
+  let str = "";
+  for (let i = 0; i < arr.length; i++) {
+    str = arr[i]
+      .split("")
+      .reverse()
+      .join("");
+    newArray.push(str);
+  }
+  return newArray;
+}
+
+console.log(reverseEm(newNew));
+
+const numberArray = [1, 3, 6, 9];
+
+function addEm(total, num) {
+  return total + num;
+}
+
+console.log(numberArray.reduce(addEm));
+
+const addUp = (x, y) => x + y;
+console.log(numberArray.reduce(addUp));
+console.log(numberArray.reduce(addUp, 100));
