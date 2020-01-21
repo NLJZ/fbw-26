@@ -20,17 +20,39 @@ console.log(euroCities);
 euroCities.push("Budapest");
 console.log(euroCities);
 //Create another variable named asianCities and assign an array of at least 5 cities to the variable.
+const asianCities = ["Tokyo", "Seoul", "Bejing", "Osaka", "Shanghai"];
+console.log(asianCities);
 //Use an array method to select items 2-4 from the array of asianCities and store this in another variable.
-
+const asianCities2 = asianCities.splice(1, 3);
+console.log(asianCities2);
 //sumOfNumbers. Create a program that adds up the numbers in an array (of at least 3 numbers).
+const intArray = [5, 6, 10];
+let sum = 0;
+for (let i = 0; i < intArray.length; i++) {
+  sum += intArray[i];
+}
+console.log(`${sum}`);
+
 //Bonus: Print to screen both the sum and the product of these numbers.
+
 //Hello Friend Create an array filled with your friends’ and family’s names. Loop over the array and greet each friend e.g. Hello Maria! Hello Mike! etc.
+const friends = ["Elena", "Peter", "Orland"];
+for (let i = 0; i < friends.length; i++) {
+  console.log(`Hello ${friends[i]}`);
+}
+
 //Bonus: Print the indexes of each item in the array. Expected output example: Mike is at index 1 of my friends array.
 //City Names. Create an array of city names. Loop through the array and add the city names to a string.
 //Example of expected output: “Berlin, Paris, Prague, Rome”.
 
 //Odds and Evens. Create a program that changes a given array by adding 1 to each odd integer and subtracting 1 from each even integer. Examples:[3, 5, 2, 4] ➞ expected output: [4, 6, 1, 3]
 //[6, 9, 10, 20] ➞ expected output: [5, 10, 9, 19]
+let numbers = [1, 2, 3, 4, 5];
+for (let i = 0; i < numbers; i++){
+    if (i % !== 0) {
+        number
+    }
+}
 //Capitalize. Create a program that capitalises the first letter of each element in an array of names. Examples:
 //[“matt”, “sara”, “lara”] ➞ [“Matt”, “Sara”, “Lara”]
 //[“samuel”, “MARIA”, “luke”, “mary”] ➞ [“Samuel”, “Maria”, “Luke”, “Mary”]
