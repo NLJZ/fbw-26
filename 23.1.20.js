@@ -85,3 +85,35 @@ names.unshift("Mark Price"); // adds item to beginning of array
 //names.shift(); // removes first item of an array
 //names.pop(); //removes last item of an array;
 console.log(names);
+
+// Array.split()
+const arr2 = ["Hi", "this", "is"];
+const arr3 = ["me", "writing", "you"];
+const arrTotal = arr2.concat(arr3); // joins two arrays
+arrTotal.push("too");
+console.log(arrTotal);
+console.log(arrTotal.join(" ")); // change array to string
+
+console.log(names.filter(name => name.length > 12));
+
+let arrCall = names.find(name => name.length > 10);
+console.log(arrCall);
+
+// reverse();
+const stringie = "JavaScript";
+let newRevStr = stringie
+  .split("")
+  .reverse()
+  .join("");
+console.log(newRevStr);
+
+function reverseIt(text) {
+  let reversedString = text
+    .split("")
+    .reverse()
+    .join("");
+  return reversedString;
+}
+
+console.log(reverseIt("Chocolate"));
+console.log(reverseIt("Kareem Abdoul Jabaar"));
