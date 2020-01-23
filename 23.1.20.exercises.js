@@ -78,14 +78,9 @@ console.log(toCamelCase("snack_log_hi_smile_log_number"));
 const pigLatin = str2 => {
   let splitString = str2.split(" ");
   let wordArray = [];
-
   for (i = 0; i < splitString.length; i++) {
     let firstChr = splitString[i].slice(0, 1);
     let restStr = splitString[i].slice(1, splitString[i].length);
-    let punctCheck = splitString[i].slice(
-      splitString[i].length - 1,
-      splitString[i].length
-    );
     let ayEnd = "ay";
     let vowelEnd = "way";
     if (
@@ -100,7 +95,7 @@ const pigLatin = str2 => {
       firstChr == "O" ||
       firstChr == "U"
     ) {
-      let newvowword = restStr + firstChr + vowelEnd;
+      let newvowword = firstChr + restStr + vowelEnd;
 
       wordArray.push(newvowword);
     } else {
@@ -109,9 +104,41 @@ const pigLatin = str2 => {
     }
   }
 
-  result = wordArray.join(" ");
-  return result;
+  unfixed = wordArray.join(" ");
+  let fixStr = unfixed[0].toUpperCase() + unfixed.substring(1).toLowerCase();
+  fixStr = fixStr.replace(".", "");
+  fixStr = fixStr + ".";
+  return fixStr;
 };
 
-console.log(pigLatin("I am your friend"));
+console.log(pigLatin("I am your friend."));
 console.log(pigLatin("Go to the store buy a box and put it in the closet"));
+console.log(pigLatin("I don't know what I am doing."));
+
+function pigLatin2(str) {
+  let translation = [];
+  let lowerCase = str.toLowerCase();
+  let splitStr = str.split(" ");
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (i = 0; i < splitStr.length; i++) {
+    let firstChr = splitStr[i][0];
+    let remainder = splitStr[i].slice(1, splitStr[i].length);
+    if (vowels.includes(firstChr.toLowerCase)) {
+      let firstChrVal =
+        (i ? firstChr : firstChr.toUppercase()) + restOfStr + "way";
+    } else {
+      if (i == 0) {
+        let firstChrRan = remainder[0];
+        let wordRem = remainder.toUpperCase(1, remainder.length);
+        remainder = firstChrRan.toUpperCase() + wordRem;
+      }
+      const firstChrMain = remainder + firstChr + "ay";
+      translation.push(firstChrMain);
+    }
+  }
+  let result = translation.join(" ");
+  return result;
+}
+
+const strPig = "hi go go go I am done";
+console.log(pigLatin2(strPig));
