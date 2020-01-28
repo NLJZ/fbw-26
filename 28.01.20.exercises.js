@@ -126,7 +126,15 @@ gradeCalc(85, 50, 95, 70, 82, 88);
 const userGreeting = (name, age, city, ...args) => {
   array = args;
   activities = array.join(", ");
-  greeting = `Hi ${name}! I see you are ${age} years old and live in ${city}. You enjoy ${activities}!`;
+  firstLetterName = name.slice(0, 1);
+  restOfName = name.slice(1, name.length);
+  firstLetterNameCap = firstLetterName.toUpperCase();
+  nameFix = firstLetterNameCap + restOfName;
+  firstLetterCity = city.slice(0, 1);
+  restOfCity = city.slice(1, name.length);
+  firstLetterCityCap = firstLetterCity.toUpperCase();
+  cityFix = firstLetterCityCap + restOfCity;
+  greeting = `Hi ${nameFix}! I see you are ${age} years old and live in ${cityFix}. You enjoy ${activities}!`;
   if (activities.includes("dance" || "party")) {
     console.log(greeting + " You are cool!");
   } else {
