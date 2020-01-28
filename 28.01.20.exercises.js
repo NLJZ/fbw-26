@@ -12,7 +12,9 @@ lookInside("Yo yo JavaScript");
 
 // Create a function that calculates the user age e.g. 2000 -> 20.
 age = num => {
-  let result = 2020 - num;
+  let date = new Date();
+  currentYear = date.getFullYear();
+  let result = currentYear - num;
   console.log(`You are, or will be, ${result} years old this year.`);
 };
 
@@ -21,28 +23,44 @@ age(1980);
 // Create a function that accepts a text from user and check if the user has entered a month name, if so print out that month and in which season it is.
 
 month = str => {
-  let fixStr = str.toLowerCase();
   const winter = ["january", "february", "december"];
   const spring = ["march", "april", "may"];
   const summer = ["june", "july", "august"];
   const autumn = ["september", "october", "november"];
-  firstLetter = fixStr.slice(0, 1);
-  firstUpper = firstLetter.toUpperCase();
-  superFixStr = firstUpper + fixStr.slice(1);
-  if (winter.includes(fixStr)) {
-    console.log(`${superFixStr} is a Winter month.`);
-  } else if (spring.includes(fixStr)) {
-    console.log(`${superFixStr} is a month in Spring.`);
-  } else if (summer.includes(fixStr)) {
-    console.log(`${superFixStr} is a month in Summer.`);
-  } else if (autumn.includes(fixStr)) {
-    console.log(`${superFixStr} is a month in Autumn.`);
-  } else {
-    console.log(`${str} is not a month.`);
+  let fixStr = str.toLowerCase();
+  array = fixStr.split(" ");
+  for (let i = 0; i < array.length; i++) {
+    if (
+      array[i] == "january" ||
+      array[i] == "february" ||
+      array[i] == "march" ||
+      array[i] == "april" ||
+      array[i] == "may" ||
+      array[i] == "june" ||
+      array[i] == "july" ||
+      array[i] == "august" ||
+      array[i] == "september" ||
+      array[i] == "october" ||
+      array[i] == "november" ||
+      array[i] == "december"
+    ) {
+      let month = array[i];
+      if (winter.includes(month)) {
+        console.log(`${month} is a Winter month.`);
+      } else if (spring.includes(month)) {
+        console.log(`${month} is a month in Spring.`);
+      } else if (summer.includes(month)) {
+        console.log(`${month} is a month in Summer.`);
+      } else if (autumn.includes(month)) {
+        console.log(`${month} is a month in Autumn.`);
+      } else {
+        console.log(`${str} is not a month.`);
+      }
+    }
   }
 };
 
-month("january");
+month("October november blah blah blah");
 
 // Create a function that takes a string and a word, and then returns true or false depending on whether the word starts with the initial string.
 // dictionary("bu", "button") ➞ true
