@@ -78,25 +78,14 @@ console.log(toCamelCase("snack_log_hi_smile_log_number"));
 const pigLatin = str2 => {
   let splitString = str2.split(" ");
   let wordArray = [];
+  const vowels = ["a", "e", "i", "o", "u", "A", "E", "I", "O", "U"];
   for (i = 0; i < splitString.length; i++) {
     let firstChr = splitString[i].slice(0, 1);
     let restStr = splitString[i].slice(1, splitString[i].length);
     let ayEnd = "ay";
     let vowelEnd = "way";
-    if (
-      firstChr == "a" ||
-      firstChr == "e" ||
-      firstChr == "i" ||
-      firstChr == "o" ||
-      firstChr == "u" ||
-      firstChr == "A" ||
-      firstChr == "E" ||
-      firstChr == "I" ||
-      firstChr == "O" ||
-      firstChr == "U"
-    ) {
+    if (vowels.includes(firstChr)) {
       let newvowword = firstChr + restStr + vowelEnd;
-
       wordArray.push(newvowword);
     } else {
       let newWord = restStr + firstChr + ayEnd;
@@ -117,28 +106,29 @@ console.log(pigLatin("I don't know what I am doing."));
 
 function pigLatin2(str) {
   let translation = [];
-  let lowerCase = str.toLowerCase();
-  let splitStr = str.split(" ");
   const vowels = ["a", "e", "i", "o", "u"];
-  for (i = 0; i < splitStr.length; i++) {
+  let lowerCase = str.toLowerCase();
+  let splitStr = lowerCase.split(" ");
+  for (let i = 0; i < splitStr.length; i++) {
     let firstChr = splitStr[i][0];
     let remainder = splitStr[i].slice(1, splitStr[i].length);
-    if (vowels.includes(firstChr.toLowerCase)) {
-      let firstChrVal =
-        (i ? firstChr : firstChr.toUppercase()) + restOfStr + "way";
+    if (vowels.includes(firstChr)) {
+      const firstChrVal =
+        (i ? firstChr : firstChr.toUpperCase()) + remainder + "way";
+      translation.push(firstChrVal);
     } else {
       if (i == 0) {
-        let firstChrRan = remainder[0];
-        let wordRem = remainder.toUpperCase(1, remainder.length);
-        remainder = firstChrRan.toUpperCase() + wordRem;
+        let firstCharRem = remainder[0];
+        let wordRemainder = remainder.slice(1, remainder.length);
+        remainder = firstCharRem.toUpperCase() + wordRemainder;
       }
-      const firstChrMain = remainder + firstChr + "ay";
-      translation.push(firstChrMain);
+      const newString = remainder + firstChr + "ay";
+      translation.push(newString);
     }
   }
   let result = translation.join(" ");
   return result;
 }
 
-const strPig = "hi go go go I am done";
-console.log(pigLatin2(strPig));
+console.log(pigLatin2("Banana the is"));
+console.log(pigLatin2("Hello I am Nathan."));
