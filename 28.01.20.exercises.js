@@ -264,11 +264,12 @@ validateEmail = email => {
   array = email.split("");
   correctChars = array.includes("." && "@");
   whereisat = array.indexOf("@");
+  whereisperiod = array.indexOf(".");
   let periodverify;
   if (period == "." || period2 == ".") {
     periodverify = true;
   }
-  if (periodverify && correctChars && whereisat > 0) {
+  if (periodverify && correctChars && whereisat > 0 && whereisperiod > 0) {
     console.log(`This looks like it could be a valid email.`);
   } else {
     console.log(`Sorry, this doesn't look like a valid email.`);
@@ -279,3 +280,4 @@ validateEmail("@example.com");
 validateEmail("john.smith@com");
 validateEmail("john.smith@possom.de");
 validateEmail("dogs@blast.pl");
+validateEmail(".ogs@blast.pl");
