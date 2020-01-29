@@ -66,7 +66,7 @@ phoneCheck = phone => {
   if (phoneStart == "030" || phoneStart == "017") {
     if (phoneFix.length == 10) {
       console.log(
-        `Looks like you've included a German phone number ${phoneFix}`
+        `Looks like you've included a German phone number: ${phoneFix}`
       );
     } else {
       console.log(`Hmmm. Maybe you haven't included a German phone number...`);
@@ -107,5 +107,6 @@ germanBank = acct => {
 
 germanBank("DE1234567890");
 germanBank("DE12345678901234567890");
+germanBank("DE123456789012345678970");
 germanBank("DE123456789012s4567890");
 germanBank("DE1234567890123aaa67890");
