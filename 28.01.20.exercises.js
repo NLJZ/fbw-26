@@ -9,6 +9,7 @@ lookInside = str => {
 };
 
 lookInside("Yo yo JavaScript");
+lookInside("Yo yo");
 
 // Create a function that calculates the user age e.g. 2000 -> 20.
 age = num => {
@@ -61,6 +62,7 @@ month = str => {
 };
 
 month("October november blah blah blah");
+month("july");
 
 // Create a function that takes a string and a word, and then returns true or false depending on whether the word starts with the initial string.
 // dictionary("bu", "button") ➞ true
@@ -307,3 +309,25 @@ validateEmail("john.smith@com");
 validateEmail("john.smith@possom.de");
 validateEmail("dogs@blast.pl");
 validateEmail(".ogs@blast.pl");
+
+function validate(email) {
+  let atSymbolPos;
+  let dotPos;
+  for (let i = 0; i < email.length; i++) {
+    if (email[i] === "@") {
+      atSymbolPos = i;
+    }
+    if (email[i] === ".") {
+      dotPos = i;
+    }
+  }
+  if (atSymbolPos > 0 && dotPos > atSymbolPos) {
+    return `${email} is valid.`;
+  } else {
+    return `${email} is invalid.`;
+  }
+}
+
+console.log(validate("contact@hadi-nsreeny.com"));
+console.log(validate("@hadi-nsreeny.com"));
+console.log(validate("contact@.com"));
