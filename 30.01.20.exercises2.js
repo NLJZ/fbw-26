@@ -104,3 +104,11 @@ alphaOrder = str => {
 alphaOrder("A");
 alphaOrder("z");
 alphaOrder("c");
+
+alphaTry = str => {
+  upperStr = str.toUpperCase();
+  console.log(upperStr.charCodeAt(0) - 64);
+};
+alphaTry("A");
+alphaTry("z");
+alphaTry("c");
