@@ -75,7 +75,7 @@ phoneCheck = phone => {
     console.log(`Hmmm. Maybe you haven't included a German phone number...`);
   }
 };
-phoneCheck("0301234567");
+phoneCheck("dog 0301234567");
 phoneCheck("0301234567 I am stupid and enter my phone number with text");
 phoneCheck("0171234567");
 phoneCheck("017123456");
@@ -110,3 +110,4 @@ germanBank("DE12345678901234567890");
 germanBank("DE123456789012345678970");
 germanBank("DE123456789012s4567890");
 germanBank("DE1234567890123aaa67890");
+germanBank("I am a dog");
