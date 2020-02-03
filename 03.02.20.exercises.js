@@ -64,3 +64,24 @@ console.log(all);
     console.log(result);
   }
 })(40, 65, 2000, 5);
+
+// trim()
+let str = "   Hi    ";
+console.log(str.trim()); // remove blank space
+console.log(str.trimEnd()); // remove blank space only at end
+console.log(str.trimStart()); // remove blank space only at start
+
+// startsWith()
+let text = "Hi we will have fun now";
+console.log(text.startsWith("we"));
+// endsWith()
+console.log(text.endsWith("we", 5));
+
+// charAt()
+let chr = "A"; // UTF-16
+console.log(chr.charCodeAt(0));
+
+// codePointAt()
+let char = "🙂";
+console.log(char.codePointAt(0));
+// spread syntax ... exercise
