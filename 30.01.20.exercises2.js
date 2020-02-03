@@ -91,6 +91,7 @@ emailCheck("a@a.c");
 emailCheck("@.");
 emailCheck("do@.com");
 emailCheck("@johnson.com");
+emailCheck("dogs");
 
 // Write a function will give the alphabetical order for a passed character
 //  i.e.  A -> 1
