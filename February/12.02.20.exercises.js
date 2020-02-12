@@ -81,3 +81,6 @@ dogs.randomChannel();
 dogs.status();
 dogs.decreaseVol();
 dogs.status();
+console.log(Math.floor(Math.random() * 50) + 1);
+
+// extends and super()

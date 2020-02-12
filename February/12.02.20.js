@@ -99,3 +99,66 @@ const date = new Date();
 console.log(date);
 let year = date.getFullYear();
 console.log(year);
+
+// extends and super()
+
+class Person1 {
+  constructor(_name, _age) {
+    this.name = _name;
+    this.age = _age;
+  }
+  display() {
+    console.log(`Hey ${this.name}`);
+  }
+}
+
+class Child extends Person1 {
+  constructor(_name, _age) {
+    super(_name, _age);
+  }
+  show() {
+    return `${this.name} is a child that is ${this.age} years old.`;
+  }
+}
+
+let spike = new Child("Spike", 4);
+spike.display();
+console.log(spike.show());
+spike.increment = function() {
+  console.log(`Hey yo!`);
+};
+
+spike.increment();
+
+let names = ["Sam", "Rob", "Marie", "Alex"];
+
+// Array.find()
+// Returns first truthy result
+
+let result = names.find(name => name.length > 3);
+console.log(result);
+// Array.filter()
+// returns an array of all items that match
+
+result = names.filter(name => name.length > 3);
+console.log(result);
+
+// Array.map()
+names.map(x => console.log(x));
+
+let letters = ["a", "c", "b", "e"];
+let numbers = [2, 4, 6, 7, 8, 9];
+
+// Array.reduce()
+//average of numbers array below
+result = numbers.reduce((acc, cur) => acc + cur) / numbers.length;
+console.log(result);
+
+// Array.sort()
+// orders in array depending on UTF-16
+letters.sort();
+console.log(letters);
+names.sort();
+console.log(names);
+
+// new Date()
