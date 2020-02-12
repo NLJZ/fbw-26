@@ -114,16 +114,27 @@ class Person1 {
 
 class Child extends Person1 {
   constructor(_name, _age) {
-    super(_name, _age);
+    super(_name, _age), (this.price = "5 dollars");
   }
   show() {
     return `${this.name} is a child that is ${this.age} years old.`;
   }
 }
+let painting = {
+  Title: "Mona Lisa",
+  Year: "1456"
+};
+
+let mike = new Person1("Mike", 44);
+console.log(mike.name);
+mike.display();
 
 let spike = new Child("Spike", 4);
+console.log(spike);
 spike.display();
 console.log(spike.show());
+console.log(spike.price);
+/*
 spike.increment = function() {
   console.log(`Hey yo!`);
 };
@@ -147,7 +158,7 @@ console.log(result);
 names.map(x => console.log(x));
 
 let letters = ["a", "c", "b", "e"];
-let numbers = [2, 4, 6, 7, 8, 9];
+let numbers = [500, 2, 4, 6, 7, 8, 9];
 
 // Array.reduce()
 //average of numbers array below
@@ -160,5 +171,8 @@ letters.sort();
 console.log(letters);
 names.sort();
 console.log(names);
-
+numbers.sort();
+console.log(numbers);
 // new Date()
+console.log(new Date());
+*/
