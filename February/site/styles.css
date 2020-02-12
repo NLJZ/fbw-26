@@ -1,0 +1,22 @@
+body {
+  font-family: sans-serif;
+}
+
+.sitewrapper {
+  max-width: 800px;
+}
+.project-holder {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1em;
+}
+
+.project {
+  min-height: 300px;
+  border: 1px solid #333;
+}
+
+.sorter-buttons {
+  grid-column-start: 1;
+  grid-column-end: 4;
+}

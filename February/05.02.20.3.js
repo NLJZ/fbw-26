@@ -1,35 +1,3 @@
-// let zoo = [{symbol: "Ccc", from: "0622"},{symbol: "xxc", from: "0712"}];
-const zodiacCheck = (name, day, month, year) => {
-  const result = {
-    userName: name,
-    birthDay: day,
-    birthMonth: month,
-    birthYear: year,
-    outPut: function() {
-      monthDay = parseInt(this.birthMonth + this.birthDay);
-      let signs = [
-        { starSign: "Capricorn", number: "119" },
-        { starSign: "Aquarius", number: "218" },
-        { starSign: "Pisces", number: "320" },
-        { starSign: "Aries", number: "419" },
-        { starSign: "Taurus", number: "520" },
-        { starSign: "Gemini", number: "620" },
-        { starSign: "Cancer", number: "722" },
-        { starSign: "Leo", number: "822" },
-        { starSign: "Virgo", number: "922" },
-        { starSign: "Libra", number: "1022" },
-        { starSign: "Scorpio", number: "1121" },
-        { starSign: "Sagittarius", number: "1221" },
-        { starSign: "Capricorn", number: "1231" }
-      ];
-      console.log(signs);
-      for (let i = 0; i < signs.length; i++) {}
-    }
-  };
-  result.outPut();
-  return result;
-};
-
 function zodiac(name, day, month, year) {
   const result = {
     userName: name,
@@ -87,3 +55,4 @@ function zodiac(name, day, month, year) {
   return result;
 }
 zodiac("Nathan", "24", "12", "1980");
+zodiac("Nathan", "02", "07", "1980");
