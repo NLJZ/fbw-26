@@ -35,19 +35,20 @@ getMonthName = month => {
     "Dec"
   ];
   try {
-    if (month > 12 || month < 1 || month % 1 != 0)
+    if (month > 12 || month < 1 || month % 1 != 0 || month == "undefined") {
       throw "Invalid Month Number!";
+    } else {
+      let monthName = monthArray[month - 1];
+      console.log(`The month is ${monthName}.`);
+    }
   } catch (err) {
     console.log("Oops " + err);
   }
-  let monthName = monthArray[month - 1];
-  console.log(`The month is ${monthName}.`);
 };
 
 getMonthName(10);
 getMonthName(2.2);
 getMonthName(99);
-getMonthName(9);
 
 // Reverse
 // Create a function that reverses a string.
@@ -57,16 +58,16 @@ getMonthName(9);
 
 reverseString = str => {
   try {
-    if (typeof str !== "string") throw "ERROR! This is not a string!";
+    if (typeof str !== "string") {
+      throw "ERROR! This is not a string!";
+    } else {
+      let strArr = str.split("");
+      let revArr = strArr.reverse();
+      let revStr = revArr.join("");
+      console.log(revStr);
+    }
   } catch (err) {
-    console.log("oops " + err);
-  }
-
-  if (typeof str == "string") {
-    let strArr = str.split("");
-    let revArr = strArr.reverse();
-    let revStr = revArr.join("");
-    console.log(revStr);
+    console.log(err);
   }
 };
 
