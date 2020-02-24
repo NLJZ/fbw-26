@@ -7,6 +7,7 @@
     <meta name="author" content="Nathan Johnson" />
     <meta name="keywords" content="webdev, css, html, javascript, es6" />
     <meta name="description" content="HTML test webpage" />
+    <link rel="stylesheet" href="styles.css" />
     <title>NLJ</title>
   </head>
   <body>
@@ -135,11 +136,10 @@
       width="250px"
       height="250px"
       title="tree"
-      id="down"
       class="img"
     /><br />
 
-    <ol>
+    <ol id="down">
       <li>pasta</li>
       <li>cheese</li>
       <li>tomato</li>
@@ -150,6 +150,13 @@
       <li>cheese</li>
       <li>tomato</li>
     </ul>
+
+    <form action="index.js" method="POST">
+      <label for="firstName">First Name:</label>
+      <input type="text" name="fname" id="firstName" /><br />
+      <label for="lastName"> Last Name:</label>
+      <input type="text" name="lname" id="lastName" />
+    </form>
 
     <a href="#top">Go up</a>
     <!-- required, selected, checked, autofocus are attributes typically for forms -->
