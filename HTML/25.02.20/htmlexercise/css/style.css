@@ -6,6 +6,11 @@ body {
 a {
   text-decoration: none;
   color: rgb(222, 222, 228);
+  margin-left: 10px;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 img {
@@ -25,8 +30,11 @@ img {
 }
 
 nav {
-  background-color: rgb(71, 106, 134);
+  background-color: rgb(100, 128, 151);
   padding: 0 5px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
 nav ul {
@@ -53,11 +61,14 @@ aside {
   width: 20%;
   padding: 20px;
   font-size: 0.8rem;
+  margin: 25px 10px;
+  color: #555;
 }
 
 aside h3 {
-  margin-top: 28px;
   text-decoration: underline;
+  font-weight: normal;
+  margin: 0 0 10px;
 }
 
 article h2 {
@@ -66,6 +77,7 @@ article h2 {
 }
 
 footer {
-  background-color: rgb(104, 104, 134);
+  background-color: rgb(100, 128, 151);
   padding: 5px;
+  text-align: right;
 }
