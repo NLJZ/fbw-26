@@ -1,0 +1,51 @@
+/* #4972BF
+#304C80
+#6198FF
+#182640
+#598DEB */
+
+body {
+  font-family: sans-serif;
+}
+
+.site_holder {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+ul li {
+  color: red;
+}
+
+table {
+  background-color: #598deb;
+  width: 25%;
+  min-width: 250px;
+  max-width: 350px;
+  border: solid 1px #333;
+}
+
+th {
+  font-size: 1.25rem;
+}
+
+td {
+  font-size: 0.8rem;
+  padding: 0.3rem;
+}
+
+td:hover {
+  color: #4972bf;
+}
+
+.book {
+  font-style: italic;
+}
+
+#books {
+  color: #304c80;
+}
+
+#firstrow {
+  color: #182640;
+}
