@@ -6,6 +6,7 @@
 
 body {
   font-family: sans-serif;
+  box-sizing: border-box;
 }
 
 .site_holder {
@@ -23,10 +24,13 @@ table {
   min-width: 250px;
   max-width: 350px;
   border: solid 1px #333;
+  border-spacing: 0;
 }
 
 th {
   font-size: 1.25rem;
+  background-color: #fff;
+  padding: 0;
 }
 
 td {
@@ -48,4 +52,43 @@ td:hover {
 
 #firstrow {
   color: #182640;
+}
+
+div {
+  width: 50px;
+  height: 50px;
+  margin-top: 1em;
+}
+
+.div1 {
+  background-color: rgb(9, 224, 106);
+}
+
+.div2 {
+  background-color: rgb(21, 192, 15);
+}
+
+.div3 {
+  background-color: rgb(102, 255, 0);
+}
+
+form {
+  margin-top: 1rem;
+}
+
+input {
+  margin: 0.5rem;
+}
+
+#dol {
+  max-width: 180px;
+}
+
+form {
+  font-size: 0.7rem;
+  width: 100%;
+}
+
+.required {
+  color: red;
 }
