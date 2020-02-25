@@ -4,6 +4,10 @@ body {
 }
 
 a {
+  color: #222;
+}
+
+li a {
   text-decoration: none;
   color: rgb(222, 222, 228);
   margin-left: 10px;
