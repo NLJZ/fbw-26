@@ -39,7 +39,8 @@ td {
 }
 
 td:hover {
-  color: #4972bf;
+  color: #fff;
+  transition: 2s;
 }
 
 .book {
@@ -91,4 +92,8 @@ form {
 
 .required {
   color: red;
+}
+
+iframe {
+  margin-top: 1rem;
 }
