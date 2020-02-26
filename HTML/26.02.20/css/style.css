@@ -10,3 +10,24 @@ body {
   width: 50px;
   border: 2px black solid;
 }
+
+h1,
+h4,
+p,
+div {
+  color: pink;
+}
+
+h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.still {
+  max-width: 500px;
+  width: 100%;
+  border: 1px solid #333;
+  padding: 10px 10px 30px 10px;
+  margin: 0 auto;
+  display: block;
+}
