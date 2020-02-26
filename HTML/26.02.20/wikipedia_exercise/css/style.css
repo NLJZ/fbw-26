@@ -1,0 +1,89 @@
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Raleway";
+  color: #555;
+}
+
+img {
+  width: 100%;
+}
+
+header {
+  height: 250px;
+  background: url("../img/felixkubin.jpg") 50% / cover;
+  position: relative;
+  margin: 0;
+}
+
+h1 {
+  margin: 10px 0 0 0;
+  font-size: 2.8rem;
+  text-align: left;
+  text-transform: uppercase;
+  color: #fff;
+  font-weight: bold;
+  margin-left: 20px;
+  opacity: 0.6;
+  bottom: 0;
+  position: absolute;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
+a {
+  color: rgb(249, 65, 255);
+}
+
+a:hover {
+  color: rgb(156, 41, 160);
+}
+
+.site-wrapper {
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.main-content {
+  margin: 30px 5px;
+  display: inline-flex;
+}
+
+article {
+  margin-right: 40px;
+}
+
+aside {
+  display: inline-block;
+}
+
+table {
+  font-size: 0.8rem;
+  border: 1px solid #555;
+  border-spacing: 0;
+}
+
+td {
+  padding: 10px;
+  vertical-align: top;
+}
+
+tr td:first-child {
+  font-weight: bold;
+}
+
+th {
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+tr:nth-child(even) {
+  background-color: #eee;
+}
+
+.felix {
+  font-weight: bold;
+}
