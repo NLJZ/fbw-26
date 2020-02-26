@@ -1,14 +1,25 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   /* background-image: url("/img/tree.jpg"); */
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
   background-blend-mode: darken;
+  padding-bottom: 150px;
+}
+
+div {
+  max-width: 800px;
+  margin: 20px auto;
 }
 
 .doggy-img {
   width: 50px;
   border: 2px black solid;
+  margin: 20px 0 0 0;
 }
 
 h1,
@@ -24,10 +35,112 @@ h1 {
 }
 
 .still {
-  max-width: 500px;
+  max-width: 100%;
   width: 100%;
-  border: 1px solid #333;
-  padding: 10px 10px 30px 10px;
+  border: 1px solid #888;
+  padding: 10px 10px 40px 10px;
   margin: 0 auto;
   display: block;
+}
+
+.email {
+  text-align: center;
+}
+
+a {
+  color: rgb(54, 70, 158);
+}
+
+.square {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin: 20px auto;
+}
+
+.circle {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  border-radius: 50%;
+  margin: 20px auto;
+}
+
+.circleinsquare {
+  width: 100px;
+  height: 100px;
+  background-color: pink;
+  margin: 20px auto;
+  display: flex;
+  align-items: center;
+}
+
+.white {
+  background-color: white;
+  height: 80px;
+  width: 80px;
+}
+
+.triangle {
+  width: 0;
+  height: 0;
+  border-right: 100px solid pink;
+  border-bottom: 130px solid transparent;
+}
+
+.rectangle {
+  width: 100px;
+  height: 125px;
+  background-color: pink;
+}
+
+.test-box {
+  width: 50%;
+  border: 1px pink solid;
+  padding: 1rem;
+}
+
+.text-box {
+  line-height: 1.7rem;
+  font-family: helvetica, sans-serif;
+  margin: 0 auto;
+  text-indent: 2rem;
+  padding: 0;
+  text-transform: uppercase;
+  text-align: justify;
+  color: pink;
+}
+
+p:last-child {
+  background-color: cornflowerblue;
+  color: white;
+  padding: 1rem;
+  font-weight: bold;
+  font-family: "Raleway";
+}
+
+p:only-child {
+  background-color: black;
+}
+
+.center {
+  text-align: center;
+}
+
+.move {
+  background-color: pink;
+  border: 2px black dotted;
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  font-size: 3rem;
+  font-family: "Trade Winds";
+  text-transform: uppercase;
+  color: black;
+}
+
+.move:hover {
+  box-shadow: 3px 4px 5px gray;
+  background-color: white;
+  border: 2px transparent dotted;
 }
