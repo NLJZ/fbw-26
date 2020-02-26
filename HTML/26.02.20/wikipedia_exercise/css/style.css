@@ -1,6 +1,7 @@
 * {
   box-sizing: border-box;
 }
+
 body {
   font-family: "Raleway";
   color: #555;
@@ -83,8 +84,4 @@ th {
 
 tr:nth-child(even) {
   background-color: #eee;
-}
-
-.felix {
-  font-weight: bold;
 }
