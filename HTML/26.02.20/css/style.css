@@ -1,0 +1,12 @@
+body {
+  /* background-image: url("/img/tree.jpg"); */
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-blend-mode: darken;
+}
+
+.doggy-img {
+  width: 50px;
+  border: 2px black solid;
+}
