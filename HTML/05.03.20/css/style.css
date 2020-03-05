@@ -29,3 +29,30 @@ h1 {
   font-size: 3rem;
   font-weight: bold;
 }
+
+.ex1 {
+  border: 4px black solid;
+  padding: 3.5rem;
+  background: url(../img/sky.png);
+  background-size: 30px;
+  background-repeat: no-repeat;
+  background-clip: border-box;
+}
+
+.ex2 {
+  border: 4px black solid;
+  padding: 3.5rem;
+  background: url(../img/sky.png);
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-clip: content-box;
+}
+
+.ex3 {
+  border: 4px black solid;
+  padding: 3.5rem;
+  background: url(../img/sky.png);
+  background-size: 130px;
+  background-repeat: no-repeat;
+  background-clip: padding-box;
+}
