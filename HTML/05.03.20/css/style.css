@@ -31,28 +31,49 @@ h1 {
 }
 
 .ex1 {
-  border: 4px black solid;
+  border: 4px black dashed;
+  margin: 10px;
   padding: 3.5rem;
-  background: url(../img/sky.png);
+  background-image: url(../img/sky.png);
+  background-color: pink;
   background-size: 30px;
   background-repeat: no-repeat;
   background-clip: border-box;
 }
 
 .ex2 {
-  border: 4px black solid;
+  border: 4px black dashed;
+  margin: 10px;
   padding: 3.5rem;
-  background: url(../img/sky.png);
+  background-image: url(../img/sky.png);
+  background-color: pink;
   background-size: 130px;
   background-repeat: no-repeat;
   background-clip: content-box;
 }
 
 .ex3 {
-  border: 4px black solid;
+  border: 4px black dashed;
+  margin: 10px;
   padding: 3.5rem;
-  background: url(../img/sky.png);
+  background-image: url(../img/sky.png);
+  background-color: pink;
   background-size: 130px;
   background-repeat: no-repeat;
   background-clip: padding-box;
+}
+
+.ex4 {
+  border: 4px black dashed;
+  margin: 10px;
+  padding: 3.5rem;
+  color: transparent;
+  background-image: url(../img/sky.png);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
+
+.ex4 h2 {
+  font-size: 4rem;
+  font-weight: bolder;
 }
