@@ -1,0 +1,31 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  font-family: sans-serif;
+}
+
+body {
+  margin: 0 auto;
+  background-color: aqua;
+}
+
+.main-text {
+  display: flex;
+  padding: 2rem;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: aqua;
+  background-image: url("../img/fly.gif"), url("../img/sky.png");
+  background-repeat: repeat-x, no-repeat;
+  background-position: center, center;
+  background-size: 80rem, cover;
+  /* background: url("../img/sky.png") no-repeat center; */
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: bold;
+}
