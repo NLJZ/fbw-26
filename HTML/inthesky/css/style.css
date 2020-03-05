@@ -1,0 +1,85 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-size: 16px;
+  font-family: helvetica, sans-serif;
+  color: #000;
+}
+
+body {
+  background-color: rgba(116, 164, 253, 0.801);
+}
+
+header {
+  height: 100vh;
+  background-image: url(../img/bird.gif), url(../img/clouds1.png);
+  background-repeat: no-repeat;
+  background-position: center, cover;
+  background-size: 40rem, 300rem;
+  background-attachment: fixed;
+}
+
+.transparent-cloud {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/clouds1.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 500rem;
+  opacity: 0.7;
+  background-attachment: scroll;
+}
+
+h1 {
+  font-size: 3rem;
+  text-transform: uppercase;
+}
+
+section {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.part2 {
+  background-image: url(../img/fly.gif), url(../img/clouds.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  opacity: 0.8;
+}
+
+.part3 {
+  background-image: url(../img/nasarocket.gif);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right;
+  pacity: 0.7;
+  background-attachment: fixed;
+}
+
+.transparent-cloud2 {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-image: url(../img/clouds1.png);
+  background-repeat: no-repeat;
+  background-position: cover;
+  background-size: 200rem;
+  opacity: 0.7;
+  background-attachment: scroll;
+}
+
+.part3 h1 {
+  background-color: black;
+  padding: 1rem;
+  color: #fff;
+  width: 100vw;
+  text-align: center;
+  font-size: 5rem;
+}
