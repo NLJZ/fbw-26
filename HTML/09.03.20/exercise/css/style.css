@@ -1,0 +1,21 @@
+* {
+  box-sizing: border-box;
+}
+
+div {
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.sup {
+  vertical-align: super;
+  font-size: smaller;
+}
+
+.note {
+  font-weight: bold;
+}
+
+.important {
+  font-style: italic;
+}
