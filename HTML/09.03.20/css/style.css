@@ -56,3 +56,12 @@ p {
 p:nth-child(odd) {
   font-weight: bold;
 }
+
+li {
+  list-style: none;
+}
+
+i {
+  font-size: 1em;
+  padding-right: 0.4em;
+}
