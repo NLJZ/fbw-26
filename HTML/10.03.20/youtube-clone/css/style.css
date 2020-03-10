@@ -3,6 +3,8 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
+
+  color: rgb(96, 96, 96);
 }
 
 nav {
@@ -13,11 +15,17 @@ nav {
   display: flex;
   justify-content: space-around;
   padding: 0 16px;
+  background-color: #fff;
 }
 
 i {
   color: rgb(96, 96, 96);
-  width: 100%;
+}
+
+h3 {
+  color: black;
+  font-weight: 500;
+  font-size: 1rem;
 }
 
 .logo {
@@ -41,6 +49,7 @@ nav .fa-youtube {
   font-weight: bold;
   letter-spacing: 0;
   transform: scale(1, 1.3);
+  color: black;
 }
 
 .sup {
@@ -94,7 +103,8 @@ img {
 }
 
 main {
-  padding: 56px 24px 0 24px;
+  padding: 56px 0px 0 10px;
+  display: flex;
 }
 
 aside {
@@ -102,9 +112,68 @@ aside {
   display: flex;
   justify-content: center;
   text-align: center;
+  font-size: 0.7rem;
+  padding-right: 1rem;
+}
+
+aside ul {
+  padding-top: 1rem;
 }
 
 aside li {
   list-style-type: none;
-  font-size: 0.7rem;
+  margin-bottom: 3rem;
+}
+
+aside i {
+  margin-bottom: 1rem;
+}
+
+.wrapper {
+  width: 100%;
+  height: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  color: rgb(96, 96, 96);
+  font-size: 0.9rem;
+  font-weight: bold;
+  background-color: rgb(249, 249, 249);
+  height: 48px;
+}
+
+header ul {
+  display: inline-flex;
+  min-width: max-content;
+  text-transform: uppercase;
+}
+
+header li {
+  list-style-type: none;
+  display: inline;
+  padding: 0 32px;
+}
+
+.list-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.arrow {
+  justify-content: flex-end;
+  display: flex;
+  margin-right: 20px;
+}
+
+.videos-holder {
+  background-color: #f1f1f1;
+  min-height: 95vh;
+  padding: 10px 70px;
 }
