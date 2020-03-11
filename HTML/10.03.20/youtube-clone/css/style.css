@@ -5,18 +5,22 @@
   margin: 0;
   padding: 0;
   font-family: "Roboto", sans-serif;
-
   color: rgb(96, 96, 96);
+}
+
+:root {
+  font-size: 16px;
+  font-family: "Roboto", sans-serif;
 }
 
 nav {
   position: fixed;
   top: 0;
   width: 100%;
-  height: 56px;
+  height: 3.5rem;
   display: flex;
   justify-content: space-around;
-  padding: 0 16px;
+  padding: 0 1rem;
   background-color: #fff;
 }
 
@@ -37,11 +41,11 @@ h3 {
   display: inline-flex;
   align-items: center;
   max-width: min-content;
-  padding-left: 8px;
+  padding-left: 0.5rem;
 }
 
 nav .fa-bars {
-  padding: 8px;
+  padding: 0.5rem;
   margin-right: 1rem;
 }
 
@@ -59,27 +63,27 @@ nav .fa-youtube {
 .sup {
   font-size: 0.7rem;
   color: #444;
-  height: 23px;
-  padding-left: 4px;
+  height: 1.4375rem;
+  padding-left: 0.25rem;
 }
 
 .searchbar {
   width: 100%;
   display: inline-flex;
-  height: 32px;
+  height: 2rem;
   align-self: center;
   justify-content: center;
-  margin: 0 20px;
+  margin: 0 1.25rem;
 }
 
 .search {
   width: 100%;
-  max-width: 575px;
+  max-width: 35.94rem;
   justify-self: center;
 }
 
 .search-button {
-  width: 74px;
+  width: 4.63rem;
   padding: 1px 6px;
   background-color: #eee;
   border: 1px #ddd solid;
@@ -96,20 +100,20 @@ nav .fa-youtube {
 }
 
 .user-photo {
-  width: 32px;
-  height: 32px;
+  width: 2rem;
+  height: 2rem;
   border-radius: 50%;
 }
 
 .user-buttons i,
 img {
-  margin: 0 8px;
+  margin: 0 0.5rem;
 }
 
 /* main content styles */
 
 main {
-  padding: 56px 0px 0 0px;
+  padding: 3.5rem 0 0 0;
   display: flex;
   width: 100%;
 }
@@ -121,12 +125,11 @@ aside {
 
 @media only screen and (min-width: 700px) {
   aside {
-    width: 7rem;
+    width: 6rem;
     display: flex;
     justify-content: center;
     text-align: center;
     font-size: 0.7rem;
-    padding-right: 1rem;
   }
 
   aside ul {
@@ -174,9 +177,9 @@ aside {
   font-size: 0.9rem;
   font-weight: bold;
   background-color: rgb(249, 249, 249);
-  height: 48px;
+  height: 3rem;
   min-width: 0;
-  padding-left: 10px;
+  padding-left: 0.625rem;
   position: fixed;
   z-index: 100;
 }
@@ -186,7 +189,7 @@ aside {
   text-transform: uppercase;
   justify-content: space-around;
   width: 100%;
-  max-width: 800px;
+  max-width: 50rem;
 }
 
 .video-nav li {
@@ -208,13 +211,12 @@ aside {
 .arrow {
   justify-content: flex-end;
   display: flex;
-  margin-right: 20px;
+  margin-right: 0.8rem;
 }
 
 .videos-holder {
   background-color: #f1f1f1;
-
-  padding: 4rem 70px 0 70px;
+  padding: 4rem 4.375rem 0 4.375rem;
   display: flex;
   flex-direction: column;
   height: 100vh;
@@ -239,7 +241,7 @@ div.video-section-info > i,
 h3,
 .play-all {
   display: inline-block;
-  padding-right: 20px;
+  padding-right: 0.8rem;
 }
 
 .play-all {
@@ -260,7 +262,7 @@ h3,
 }
 
 .video {
-  max-width: 210px;
+  max-width: 13.125rem;
   height: 100%;
   display: flex;
   flex-direction: column;
@@ -268,12 +270,12 @@ h3,
 }
 
 .video img {
-  max-width: 200px;
+  max-width: 12.5rem;
   width: 100%;
   object-fit: cover;
   margin: 0;
-  min-height: 120px;
-  max-height: 120px;
+  min-height: 7.5rem;
+  max-height: 7.5rem;
 }
 
 .video h4 {
@@ -360,3 +362,21 @@ span.watch-later:hover .watch-later-text {
   right: 2rem;
   cursor: pointer;
 }
+
+div.videos > div:nth-child(n + 5) {
+  display: none;
+}
+
+@media only screen and (min-width: 1200px) {
+  div.videos > div:nth-child(5) {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1400px) {
+  div.videos > div:nth-child(6) {
+    display: flex;
+  }
+}
+
+div.videos>div: nth-child(n + 5);
