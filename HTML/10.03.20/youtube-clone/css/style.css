@@ -178,6 +178,7 @@ aside {
   min-width: 0;
   padding-left: 10px;
   position: fixed;
+  z-index: 100;
 }
 
 .video-nav ul {
@@ -212,10 +213,11 @@ aside {
 
 .videos-holder {
   background-color: #f1f1f1;
-  min-height: 95vh;
-  padding: 4rem 70px;
+
+  padding: 4rem 70px 0 70px;
   display: flex;
   flex-direction: column;
+  height: 100vh;
 }
 
 .video-section:nth-child(n + 2) {
