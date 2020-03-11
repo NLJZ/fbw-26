@@ -34,6 +34,10 @@ h3 {
   font-size: 1rem;
 }
 
+input {
+  border-width: 1px;
+}
+
 /* navbar styles */
 
 .logo {
@@ -363,11 +367,17 @@ span.watch-later:hover .watch-later-text {
   cursor: pointer;
 }
 
-div.videos > div:nth-child(n + 5) {
+div.videos > div:nth-child(n + 4) {
   display: none;
 }
 
-@media only screen and (min-width: 1200px) {
+@media only screen and (min-width: 1000px) {
+  div.videos > div:nth-child(4) {
+    display: flex;
+  }
+}
+
+@media only screen and (min-width: 1280px) {
   div.videos > div:nth-child(5) {
     display: flex;
   }
