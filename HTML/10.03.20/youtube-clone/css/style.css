@@ -1,3 +1,5 @@
+/* global styles */
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -27,6 +29,8 @@ h3 {
   font-weight: 500;
   font-size: 1rem;
 }
+
+/* navbar styles */
 
 .logo {
   width: 100%;
@@ -102,32 +106,44 @@ img {
   margin: 0 8px;
 }
 
+/* main content styles */
+
 main {
-  padding: 56px 0px 0 10px;
+  padding: 56px 0px 0 0px;
   display: flex;
+  width: 100%;
 }
 
+/* side navigation styles */
 aside {
-  width: 72px;
-  display: flex;
-  justify-content: center;
-  text-align: center;
-  font-size: 0.7rem;
-  padding-right: 1rem;
+  display: none;
 }
 
-aside ul {
-  padding-top: 1rem;
+@media only screen and (min-width: 700px) {
+  aside {
+    width: 7rem;
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 0.7rem;
+    padding-right: 1rem;
+  }
+
+  aside ul {
+    padding-top: 1rem;
+  }
+
+  aside li {
+    list-style-type: none;
+    margin-bottom: 3rem;
+  }
+
+  aside i {
+    margin-bottom: 1rem;
+  }
 }
 
-aside li {
-  list-style-type: none;
-  margin-bottom: 3rem;
-}
-
-aside i {
-  margin-bottom: 1rem;
-}
+/* videos area styles */
 
 .wrapper {
   width: 100%;
@@ -137,7 +153,9 @@ aside i {
   flex-direction: column;
 }
 
-header {
+/* video navigation area */
+
+.video-nav {
   display: flex;
   width: 100%;
   align-items: center;
@@ -146,18 +164,21 @@ header {
   font-weight: bold;
   background-color: rgb(249, 249, 249);
   height: 48px;
+  min-width: 0;
+  padding-left: 10px;
 }
 
-header ul {
+.video-nav ul {
   display: inline-flex;
-  min-width: max-content;
   text-transform: uppercase;
+  justify-content: space-around;
+  width: 100%;
+  max-width: 800px;
 }
 
-header li {
+.video-nav li {
   list-style-type: none;
   display: inline;
-  padding: 0 32px;
 }
 
 .list-wrapper {
@@ -176,4 +197,35 @@ header li {
   background-color: #f1f1f1;
   min-height: 95vh;
   padding: 10px 70px;
+  display: flex;
+  flex-direction: row;
+}
+
+.video-section {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.videos {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  min-height: min-content;
+}
+
+.video {
+  max-width: 210px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.video img {
+  max-width: 210px;
+  width: 100%;
+  object-fit: contain;
+  margin: 0;
+  height: 100%;
 }

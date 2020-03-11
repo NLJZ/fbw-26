@@ -2,6 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: helvetica;
 }
 
 .daddy {
@@ -22,6 +23,9 @@
   align-self: flex-start;
   order: 1;
   flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .baby2 {
@@ -45,5 +49,31 @@
   height: 250px;
   background-color: pink;
   order: 4;
+  flex: 1;
+}
+
+.page-layout {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+}
+
+nav {
+  width: 25%;
+  padding: 10px;
+}
+
+main {
+  display: flex;
+  flex-direction: column-reverse;
+  background-color: pink;
+}
+
+section {
+  border: solid #eee 1px;
+  padding: 10px;
+}
+
+.text-one {
   flex: 1;
 }
