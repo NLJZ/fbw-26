@@ -1,0 +1,29 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  font-family: helvetica, sans-serif;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  grid-template-rows: repeat(5, 1fr);
+  height: 100vh;
+}
+
+.box1 {
+  background-color: yellow;
+}
+
+.box2 {
+  background-color: pink;
+}
+
+.box3 {
+  background-color: red;
+}
