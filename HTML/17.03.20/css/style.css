@@ -7,6 +7,12 @@
 :root {
   font-size: 16px;
   background-color: gray;
+  font-family: helvetica, sans-serif;
+}
+
+body {
+  border: 2px red solid;
+  height: 75vh;
 }
 
 .main {
@@ -14,4 +20,41 @@
   width: 50vw;
   border: 1px solid black;
   margin: 0 auto;
+  position: relative;
+}
+
+.text {
+  width: 25%;
+  height: 25%;
+  border-radius: 50%;
+}
+
+.text.long {
+  background-color: pink;
+  position: absolute;
+  border: 1px solid black;
+}
+
+.text.like {
+  background-color: steelblue;
+  font-size: 0.8rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  left: 20px;
+  top: 5rem;
+  border: 1px solid black;
+}
+
+@media print {
+  body {
+    background-color: hotpink;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .text.like {
+    color: red;
+  }
 }
