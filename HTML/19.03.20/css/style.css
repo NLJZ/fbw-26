@@ -1,6 +1,6 @@
 * {
   margin: 0;
-  padding: 0;
+  padding: 1rem;
   box-sizing: border-box;
 }
 
@@ -9,6 +9,10 @@
   --box-width: 3rem;
   --box-color: steelblue;
   font-family: helvetica, sans-serif;
+}
+
+body {
+  display: flex;
 }
 
 .box {
@@ -21,6 +25,10 @@
   animation-duration: 4s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
+  animation-delay: 3s;
+  animation-direction: alternate-reverse;
+  animation-fill-mode: forwards;
+  animation-play-state: running;
   display: flex;
   justify-content: center;
   align-content: center;
@@ -36,5 +44,35 @@
     top: 150px;
     color: steelblue;
     background-color: #fff;
+  }
+}
+
+.size-change {
+  width: var(--box-width);
+  height: 2em;
+  border: 3px solid black;
+  position: relative;
+  animation-name: re-name;
+  animation-duration: 5s;
+  animation-iteration-count: infinite;
+}
+
+@keyframes re-name {
+  0% {
+    width: calc(var(--box-width) * 1.5);
+    background-color: pink;
+  }
+  50% {
+    width: calc(var(--box-width) * 2.5);
+    background-color: palevioletred;
+  }
+
+  75% {
+    width: calc(var(--box-width) * 3);
+    background-color: palegreen;
+  }
+  100% {
+    width: calc(var(--box-width) * 3.5);
+    background-color: red;
   }
 }
