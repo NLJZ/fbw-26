@@ -1,0 +1,40 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  font-size: 16px;
+  --box-width: 3rem;
+  --box-color: steelblue;
+  font-family: helvetica, sans-serif;
+}
+
+.box {
+  width: var(--box-width);
+  height: 3.5rem;
+  font-size: 2.5em;
+  color: var(--box-color);
+  position: relative;
+  animation-name: move-down;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+@keyframes move-down {
+  from {
+    top: 0;
+    color: pink;
+    background-color: steelblue;
+  }
+  to {
+    top: 150px;
+    color: steelblue;
+    background-color: #fff;
+  }
+}
