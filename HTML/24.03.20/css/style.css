@@ -3,3 +3,45 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+:root {
+  font-family: helvetica, sans-serif;
+}
+
+/* click me button */
+
+#click {
+  padding: 3rem;
+  font-size: 2em;
+  text-align: center;
+  border-radius: 5%;
+  display: block;
+  margin: 2rem;
+  border: 3px solid #222;
+  background-color: pink;
+}
+
+#click:hover {
+  background-color: steelblue;
+  box-shadow: 0 12px 12px 0 lightgray;
+  cursor: pointer;
+  color: white;
+}
+
+#click:hover ::after {
+  content: " \00bb";
+}
+
+#box {
+  width: 6rem;
+  height: 6rem;
+  background-color: black;
+  margin: 2rem;
+}
+
+.cool {
+  background-color: violet;
+  width: 8rem;
+  height: 8rem;
+  margin: 2rem;
+}

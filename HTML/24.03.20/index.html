@@ -4,7 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="./css/style.css" />
-    <title>CSS and Javascript</title>
+    <title>The Perfect Menu</title>
   </head>
-  <body></body>
+  <body>
+    &#8801;
+    <script>
+      console.log("hi");
+    </script>
+    <button
+      id="click"
+      onclick="this.style.color='red'; this.style.fontSize='20px'"
+    >
+      <span>click me</span>
+    </button>
+
+    <button id="shBtn" onclick="hideShow()">Hide/Show</button>
+
+    <div id="box"></div>
+    <script>
+      function hideShow() {
+        console.log("yo it works");
+        // box.style.display = "none";
+        if (box.style.display == "none") {
+          box.style.display = "block";
+        } else {
+          box.style.display = "none";
+        }
+      }
+    </script>
+    <button id="color">
+      Hi It's Me
+    </button>
+    <script>
+      color.onclick = function() {
+        console.log("yo");
+        this.style.backgroundColor = "red";
+        this.style.fontSize = "3rem";
+        this.style.padding = "3rem";
+      };
+    </script>
+    <p><button onclick="box2.classList.add('cool')">Show Me</button></p>
+    <div id="box2"></div>
+  </body>
 </html>
