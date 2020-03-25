@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>Nice Form Elements</title>
+  </head>
+  <body>
+    <form action="index.php" method="GET" id="userForm">
+      Hi this is user form.
+      <button onclick="fancy()">Make Me Cool</button>
+      <input type="email" name="userEmail" id="1" />
+      <input type="password" name="pass" id="2" />
+      <input type="submit" value="send" />
+      <input type="reset" value="clear" />
+    </form>
+    <script>
+      const fancy = () => {
+        userForm.style.backgroundColor = "pink";
+        userForm.style.color = "red";
+        event.preventDefault();
+      };
+    </script>
+  </body>
+</html>
