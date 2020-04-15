@@ -1,0 +1,12 @@
+nav {
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    color: #fff;
+    &:hover {
+      background-color: color(nice);
+    }
+  }
+}

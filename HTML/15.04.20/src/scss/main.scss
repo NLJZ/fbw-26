@@ -1,25 +1,4 @@
-$my-color: rgb(43, 165, 174);
-$box-size: 30px;
-$box-color: rgb(247, 130, 150);
-
-body {
-  background-color: $my-color;
-  #box {
-    width: $box-size;
-    height: $box-size;
-    background-color: $box-color;
-  }
-}
-
-nav {
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    color: #fff;
-    &:hover {
-      background-color: #222;
-    }
-  }
-}
+@import "var";
+@import "function";
+@import "body/first-box";
+@import "menu/menu-box";
