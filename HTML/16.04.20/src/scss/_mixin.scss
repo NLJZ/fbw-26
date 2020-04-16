@@ -1,0 +1,23 @@
+@mixin flex-forever {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+@mixin font-setup($f-name, $f-size, $f-weight) {
+  font-family: $f-name;
+  font-size: $f-size;
+  font-weight: $f-weight;
+}
+
+.container {
+  @include flex-forever;
+  background-color: pink;
+  @include font-setup(aria, 3rem, bold);
+}
+
+.text-center {
+  @include flex-forever;
+  @include font-setup(aria, 9rem, normal);
+}
