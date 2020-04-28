@@ -24,3 +24,14 @@ console.log(moreClass);
 moreClass.classList.add("small");
 moreClass.classList.add("textRtl", "flexSize");
 let classArr = ["classOne", "classTwo"];
+moreClass.classList.add(...classArr);
+moreClass.style.color = "steelblue";
+moreClass.style.backgroundColor = "black";
+moreClass.style.fontSize = "3rem";
+moreClass.style.marginLeft = "5rem";
+moreClass.style.display = "flex";
+moreClass.style.justifyContent = "center";
+moreClass.style.maxWidth = "500px";
+
+document.write("Hi I am Nathan");
+document.write("<h1>DOGS</h1>");
