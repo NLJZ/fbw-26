@@ -33,10 +33,15 @@ function keyUpFunction(e) {
   }
 }
 
-// function keyDownFunction(e) {
-//   if
-// }
+function keyPressFunction(e) {
+  this.style.backgroundColor = "white";
+}
+
+function keyDownFunction(e) {
+  this.style.backgroundColor = "yellow";
+}
 
 let userInput = document.getElementById("userInput");
 userInput.addEventListener("keyup", keyUpFunction);
 userInput.addEventListener("keydown", keyDownFunction);
+userInput.addEventListener("keypress", keyPressFunction);
