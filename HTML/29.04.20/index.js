@@ -34,3 +34,31 @@ form.addEventListener("submit", () => {
 form.addEventListener("reset", () => {
   alert("Your input has been cleared");
 });
+
+// let numOne = document.getElementById("firstNum");
+// let numTwo = document.getElementById("secondNum");
+// let numSum = document.getElementById("sumResult");
+let x = 0;
+let y = 0;
+firstNum.addEventListener("keyup", () => {
+  if (firstNum.value == "") {
+    x = 0;
+  } else {
+    x = parseInt(firstNum.value);
+  }
+  addEm();
+});
+secondNum.addEventListener("keyup", () => {
+  if (secondNum.value == "") {
+    y = 0;
+  } else {
+    y = parseInt(secondNum.value);
+  }
+  addEm();
+});
+function addEm() {
+  sumResult.value = x + y;
+  if (isNaN(sumResult.value)) {
+    sumResult.value = "???";
+  }
+}
