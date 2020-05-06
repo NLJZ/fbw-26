@@ -51,3 +51,21 @@ const fetchApi = () => {
       document.querySelector(".result").innerHTML = imgCard;
     });
 };
+
+const fetch10 = () => {
+  fetch("https://jsonplaceholder.typicode.com/photos")
+    .then((response) => response.json())
+    .then((data) => {
+      let imgCard = "<h2>Images</h2>";
+      for (i = 0; i < 10; i++) {
+        var photo = data[i];
+        imgCard += `
+        <div class='card' id=${photo.id}>
+          <img src=${photo.thumbnailUrl} alt=${photo.title}>
+          <h3>${photo.title}</h3>
+          <img src=${photo.url} alt=${photo.title}>
+        </div>`;
+      }
+      document.querySelector(".result").innerHTML = imgCard;
+    });
+};
