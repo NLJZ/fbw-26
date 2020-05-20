@@ -1,7 +1,7 @@
 // More API
 "use strict";
 
-// "sloppy mode"; -- not strict
+// 'sloppy mode';
 
 class GitHubApi {
   constructor(options = {}) {
@@ -33,7 +33,7 @@ class GitHubApi {
       // getting the value from input field
       const username = this.elements.input.value.trim();
       this.getRepositories(username, (repositories) => {
-        repositories = this.filterRepositoryResults(repositories);
+        repositories = this.fitterRepositoryResults(repositories);
         const markup = this.createListTemplate(repositories);
         this.elements.list.innerHTML = markup;
       });
@@ -55,12 +55,12 @@ class GitHubApi {
         callback(data);
       });
   }
-  filterRepositoryResults(repositoryData) {
+  fitterRepositoryResults(repositoryData) {
     const repositories = repositoryData.map((repo) => {
       return {
         description: repo.description,
         name: repo.name,
-        url: repo.html_url,
+        url: repo.url,
         createdAt: repo.created_at,
       };
     });
@@ -71,28 +71,28 @@ class GitHubApi {
   <form class="form">
   <label for="username">Name</label>
   <input type="text" class="inputText" placeholder="Github username" required></input>
-  <input type="submit" class="btn" value="Submit">
-  </form>
-  <div class="repositories"></div>
+  <input type="submit" class="btn" value="Submit"/>
+</form>
+<div class="repositories"></div>
   `;
   }
   createListTemplate(repositories) {
-    return `
+    return ` 
   <div>
   ${repositories.map((repository) => this.listTemplate(repository)).join("")}
-  </div>
+</div>
   `;
   }
   listTemplate(repository) {
     return `
   <a href="${repository.url}" target="_blank" class="widget-box">
-    <h4>${repository.name}</h4>
-    <small>${repository.createdAt}</small>
+      <h4>${repository.name}</h4>
+      <small>${repository.createdAt}</small>
     <p>
       ${repository.description}
     </p>
   </a>
-  `;
+`;
   }
 }
 
