@@ -28,6 +28,9 @@ switch (operation) {
   case "avg":
     console.log(avg(numbers));
     break;
+  case "mid":
+    console.log(mid(numbers));
+    break;
   default:
     console.log("I cannot do this. please type 'sum' or 'avg' to calculate ");
 }
