@@ -16,6 +16,20 @@ function sum(numArray) {
 function avg(numArray) {
   return sum(numArray) / numArray.length;
 }
+
+function med(numArray) {
+  sortNums = numArray.sort(function (a, b) {
+    return a - b;
+  });
+  halfArray = Math.floor(sortNums.length / 2);
+  if (sortNums.length % 2 !== 0) {
+    let median = sortNums[halfArray];
+    return median;
+  } else {
+    let twoNumArray = sortNums.slice(halfArray - 1, halfArray + 1);
+    return avg(twoNumArray);
+  }
+}
 const [operation, ...rest] = args;
 
 const numbers = rest.map(parseNum);
@@ -28,8 +42,8 @@ switch (operation) {
   case "avg":
     console.log(avg(numbers));
     break;
-  case "mid":
-    console.log(mid(numbers));
+  case "med":
+    console.log(med(numbers));
     break;
   default:
     console.log("I cannot do this. please type 'sum' or 'avg' to calculate ");
