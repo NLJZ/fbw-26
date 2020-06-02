@@ -9,7 +9,7 @@ class OpenWeatherClient {
 	}
 	get(endpoint) {
 		const URL =
-			url.resolve(this.baseURL, endpoint) +
+			url.resolve(this.baseUrl, endpoint) +
 			`&units=metric&appid=${this.apiKey}`;
 		return axios
 			.get(URL)
