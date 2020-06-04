@@ -1,3 +1,4 @@
+#!/usr/bin/env node
 // console.log("hi")
 const weather = require('./lib/weather');
 const args = process.argv.slice(2);
