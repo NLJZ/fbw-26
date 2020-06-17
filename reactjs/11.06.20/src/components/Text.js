@@ -25,4 +25,14 @@ class Text extends React.Component {
   }
 }
 
-export default Text;
+class Hello extends React.Component {
+  render() {
+    return (
+      <p>
+        <h5>Hey I like using React.</h5>
+      </p>
+    );
+  }
+}
+
+export { Text, Hello };

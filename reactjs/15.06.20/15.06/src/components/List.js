@@ -24,6 +24,15 @@ export default class List extends Component {
         list: [...this.state.list, userText],
       });
     };
+
+    this.remove = (itemToBeRemoved) => {
+      const newArr = this.state.list.filter((item) => item !== itemToBeRemoved);
+      console.log(newArr);
+      this.setState({
+        list: newArr,
+      });
+    };
+
     return (
       <React.Fragment>
         <form onSubmit={this.add}>
@@ -36,7 +45,7 @@ export default class List extends Component {
           />
           <input type="submit" value="Add" />
         </form>
-        <UserList list={this.state.list} />
+        <UserList list={this.state.list} del={this.remove} />
       </React.Fragment>
     );
   }
