@@ -1,15 +1,16 @@
 import React from "react";
+import CartItem from "./CartItem";
 
-export default class ShoppingCart extends React.Component {
-  constructor(props) {
-    super(props);
-    this.state = {
-      cart: [],
-      data: this.props.cartData,
-    };
-  }
+const ShoppingCart = (props) => {
+  const items = props.data.map((item) => {
+    return <CartItem info={item} />;
+  });
+  return (
+    <div>
+      <h1>Your Cart</h1>
+      <ul>{items}</ul>
+    </div>
+  );
+};
 
-  render() {
-    return <ul></ul>;
-  }
-}
+export default ShoppingCart;

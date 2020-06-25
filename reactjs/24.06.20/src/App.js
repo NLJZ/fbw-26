@@ -10,6 +10,7 @@ export default class App extends React.Component {
       userInput: "",
       data: Data,
       filteredData: [],
+      shoppingCart: [],
     };
   }
 
@@ -28,6 +29,11 @@ export default class App extends React.Component {
     });
   };
 
+  addToCart = (itemToAdd) => {
+    this.setState({
+      shoppingCart: [...this.state.shoppingCart, itemToAdd],
+    });
+  };
   render() {
     return (
       <main>
@@ -44,8 +50,9 @@ export default class App extends React.Component {
           data={
             this.state.userInput ? this.state.filteredData : this.state.data
           }
+          addIt={this.addToCart}
         />
-        <ShoppingCart />
+        <ShoppingCart data={this.state.shoppingCart} />
       </main>
     );
   }
