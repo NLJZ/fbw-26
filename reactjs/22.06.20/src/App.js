@@ -6,7 +6,7 @@ export default class App extends Component {
     this.state = {
       userName: "",
     };
-    this.text = "";
+    this.state = { text: "" };
   }
 
   login = () => {
@@ -23,7 +23,7 @@ export default class App extends Component {
     this.text = "I run after componentDidMount";
   }
 
-  shouldComponentUpdtae() {
+  shouldComponentUpdate() {
     return true;
   }
 
