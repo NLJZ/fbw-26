@@ -1,21 +1,50 @@
-const increment = (num) => {
+const addProduct = (product) => {
   return {
-    type: "INCREMENT",
-    payload: num,
+    type: "ADD_PRODUCT",
+    product,
   };
 };
 
-const decrement = (num) => {
+const removeOne = (product) => {
   return {
-    type: "DECREMENT",
-    payload: num,
+    type: "REMOVE_ONE",
+    product,
   };
 };
 
-const login = () => {
+const removeAll = (product) => {
   return {
-    type: "LOGIN",
+    type: "REMOVE_ALL",
+    product,
   };
 };
 
-export { increment, decrement, login };
+const checkout = () => {
+  return {
+    type: "CHECKOUT",
+  };
+};
+
+export { addProduct, removeOne, removeAll, checkout };
+
+// const increment = (num) => {
+//   return {
+//     type: "INCREMENT",
+//     payload: num,
+//   };
+// };
+
+// const decrement = (num) => {
+//   return {
+//     type: "DECREMENT",
+//     payload: num,
+//   };
+// };
+
+// const login = () => {
+//   return {
+//     type: "LOGIN",
+//   };
+// };
+
+// export { increment, decrement, login };
