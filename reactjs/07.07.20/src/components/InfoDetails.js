@@ -9,3 +9,4 @@ const InfoDetails = ({ item }) => {
   );
 };
 export default InfoDetails;
+w;

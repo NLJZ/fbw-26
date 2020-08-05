@@ -2,7 +2,7 @@ import React, { useState, createContext } from "react";
 
 const DataContext = createContext();
 
-const DataProvider = () => {
+const DataProvider = (props) => {
   const [data, setData] = useState([
     { name: "Ali", age: 35 },
     { name: "Ben", age: 29 },
