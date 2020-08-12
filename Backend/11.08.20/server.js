@@ -1,5 +1,4 @@
-// error handling express.js
-
+// Error handling in Express.js
 const http = require("http");
 const app = require("./app");
 

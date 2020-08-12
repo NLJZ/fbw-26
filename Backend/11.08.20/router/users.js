@@ -1,9 +1,13 @@
 const express = require("express");
-const usersRouter = express.Router();
+const router = express.Router();
 
-// users route
-usersRouter.get("/users", (req, res, next) => {
-  res.send("Users");
+// root route
+router.get("/", (req, res) => {
+  res.send("Hey this is Users Page");
 });
 
-module.exports = usersRouter;
+router.get("/about", (req, res) => {
+  res.send("Hey this is about");
+});
+
+module.exports = router;
