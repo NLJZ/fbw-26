@@ -1,6 +1,6 @@
 // MongoDB with Express
 // But first REST API REpresentational State Transfer
-
+require("dotenv").config;
 const http = require("http");
 const app = require("./app");
 
