@@ -19,5 +19,8 @@ mongoose
   .catch((error) => {
     console.log(`There was a problem ${error}`);
   });
+app.use(express.json());
+const employees = require("./router/employees");
+app.use("/employees", employees);
 
 module.exports = app;

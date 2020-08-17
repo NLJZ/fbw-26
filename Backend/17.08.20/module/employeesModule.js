@@ -1,4 +1,4 @@
-const mongoose = require("mongooese");
+const mongoose = require("mongoose");
 const employeesDataSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -9,7 +9,7 @@ const employeesDataSchema = new mongoose.Schema({
     type: Number,
     required: true,
   },
-  address: String,
+  add: String,
   employeeAddedDate: {
     type: String,
     required: true,
