@@ -11,10 +11,14 @@ const employeesDataSchema = new mongoose.Schema({
   },
   add: String,
   employeeAddedDate: {
-    type: String,
+    type: Date,
     required: true,
     default: Date.now,
   },
 });
 
-module.exports = mongoose.model("employeesData", employeesDataSchema);
+module.exports = mongoose.model(
+  "employeesData",
+  employeesDataSchema,
+  "employeesData"
+);
