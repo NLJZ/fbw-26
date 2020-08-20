@@ -35,8 +35,23 @@ const getAdd = async (req, res, next) => {
 };
 const getAllEmployee = async (req, res) => {
   try {
+    // find returns an array
     const employees = await employeesData.find();
-    res.status(200).json(employees);
+    console.log(employees);
+    res.status(200).json(
+      employees.map((employee) => {
+        return {
+          employeeId: employee._id,
+          employeeName: employee.name,
+          age: employee.age,
+          employeeAddedDate: employee.employeeAddedDate,
+          request: {
+            type: "GET",
+            url: `http://localhost:3000/employees/${employee.name}`,
+          },
+        };
+      })
+    );
   } catch (err) {
     res.status(500).json({ message: err.message });
   }
@@ -98,6 +113,9 @@ const updateAllEmployeeData = async (req, res) => {
           name: req.body.name,
           age: req.body.age,
           add: req.body.add,
+        },
+        $currentDate: {
+          employeeAddedDate: Date.now,
         },
       }
     );
