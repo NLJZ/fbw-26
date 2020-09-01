@@ -62,7 +62,25 @@ router.get("/:name", getEmployee, (req, res) => {
   res.status(200).json(res.employee);
 });
 // Update one
-router.patch("/:name", getEmployee, (req, res) => {});
+router.patch("/:name", getEmployee, async (req, res) => {
+  if (req.body.name) {
+    res.employee.name = req.body.name;
+  }
+  if (req.body.age) {
+    res.employee.age = req.body.age;
+  }
+  if (req.body.add) {
+    res.employee.add = req.body.add;
+  }
+  try {
+    await res.employee.save();
+    res.status(200).json({ message: "Employee Updated", data: res.employee });
+  } catch (err) {
+    res.status(400).json({
+      message: err.message,
+    });
+  }
+});
 // Delete
 router.delete("/:name", getEmployee, async (req, res) => {
   try {
