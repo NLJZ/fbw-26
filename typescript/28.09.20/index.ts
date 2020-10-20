@@ -1,3 +1,4 @@
+console.log("dogs");
 console.log("hi");
 // let x: number = 0;
 
@@ -52,3 +53,7 @@ const arr: listOfMany = [];
 arr.push(33);
 arr.push("hi");
 arr.push(4);
+
+let cat = "dog";
+let hand = "closed";
+let face = "happy";
