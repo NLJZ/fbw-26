@@ -56,6 +56,8 @@ const addBook = async (req, res) => {
           _id: new mongoose.Types.ObjectId(),
           title: req.body.title,
           author: req.params.id, // get the _id from the author
+          translator: req.body.translator,
+          dogs: req.body.dogs,
         });
         book.save();
         author.books.push(book);

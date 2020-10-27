@@ -9,10 +9,15 @@ const authorSchema = Schema({
   books: [{ type: Schema.Types.ObjectId, ref: "Book" }],
 });
 
-const bookSchema = Schema({
-  author: { type: Schema.Types.ObjectId, ref: "Author" },
-  title: String,
-});
+const bookSchema = Schema(
+  {
+    author: { type: Schema.Types.ObjectId, ref: "Author" },
+    translator: String,
+    title: String,
+    dogs: Array,
+  },
+  { timestamps: true }
+);
 
 const Book = mongoose.model("Book", bookSchema);
 const Author = mongoose.model("Author", authorSchema);
