@@ -1,0 +1,45 @@
+body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+.loading {
+  display: flex;
+  width: 200px;
+  height: 200px;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background-color: #ffffff;
+  border: 10px #ccc solid;
+  border-top: 10px black solid;
+  border-bottom: 10px black solid;
+  animation: spin linear 2s infinite;
+  position: absolute;
+}
+
+.text {
+  z-index: 200;
+  font-family: sans-serif;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(1deg);
+  }
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(359deg);
+  }
+}
